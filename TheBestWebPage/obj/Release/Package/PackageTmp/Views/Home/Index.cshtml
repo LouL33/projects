@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>TheBestWebPage</h1>
+</div>
+
+<h2>Posts</h2>
+@if (HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    <div>@Html.ActionLink("Create New", "Create", "PostModels")</div>
+}
